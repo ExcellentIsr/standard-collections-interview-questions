@@ -4,16 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import telran.util.*;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class StackIntTest {
 	StackInt st = new StackInt();
-	
-	@BeforeEach
-	void setUp() throws Exception {
-		
-	}
 	
 	@Test
 	void isEmptyTest() {
