@@ -9,12 +9,12 @@ import org.junit.jupiter.api.Test;
 
 class StackIntTest {
 	StackInt st = new StackInt();
-
+	
 	@BeforeEach
 	void setUp() throws Exception {
-
+		
 	}
-
+	
 	@Test
 	void isEmptyTest() {
 		assertTrue(st.isEmpty());
@@ -23,7 +23,7 @@ class StackIntTest {
 		st.pop();
 		assertTrue(st.isEmpty());
 	}
-
+	
 	@Test
 	void pushTest() {
 		st.push(5);
@@ -35,7 +35,7 @@ class StackIntTest {
 		st.push(0);
 		assertEquals(0, st.pop());
 	}
-
+	
 	@Test
 	void popTest() {
 		st.push(5);
@@ -47,7 +47,7 @@ class StackIntTest {
 		assertEquals(10, st.pop());
 		assertEquals(5, st.pop());
 	}
-
+	
 	@Test
 	void getMaxTest() throws Exception {
 		st.push(4);
@@ -58,7 +58,7 @@ class StackIntTest {
 		assertEquals(10, st.getMax());
 		st.push(2);
 		assertEquals(10, st.getMax());
-
+		
 		assertEquals(2, st.pop());
 		assertEquals(10, st.getMax());
 		assertEquals(10, st.pop());
