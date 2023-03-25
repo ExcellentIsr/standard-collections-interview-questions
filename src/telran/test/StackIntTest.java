@@ -44,10 +44,10 @@ class StackIntTest {
 	
 	@Test
 	void getMaxTest() throws Exception {
-		st.push(4);
-		assertEquals(4, st.getMax());
+		st.push(7);
+		assertEquals(7, st.getMax());
 		st.push(5);
-		assertEquals(5, st.getMax());
+		assertEquals(7, st.getMax());
 		st.push(10);
 		assertEquals(10, st.getMax());
 		st.push(2);
@@ -56,9 +56,9 @@ class StackIntTest {
 		assertEquals(2, st.pop());
 		assertEquals(10, st.getMax());
 		assertEquals(10, st.pop());
-		assertEquals(5, st.getMax());
+		assertEquals(7, st.getMax());
 		assertEquals(5, st.pop());
-		assertEquals(4, st.getMax());
-		assertEquals(4, st.pop());
+		assertEquals(7, st.getMax());
+		assertEquals(7, st.pop());
 	}
 }

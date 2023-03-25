@@ -6,11 +6,11 @@ import java.util.NoSuchElementException;
 public class StackInt {
 	
 	LinkedList<Integer> list = new LinkedList<Integer>();
-	Integer max = null;
+	LinkedList<Integer> listMax = new LinkedList<Integer>();
 	//complexity of all methods [1]
 	public void push(int num) {
-		if(!list.isEmpty() && max < num || list.isEmpty()) {
-			max = num;
+		if(!list.isEmpty() && listMax.getFirst() < num || list.isEmpty()) {
+			listMax.addFirst(num);
 		}
 		list.addFirst(num);
 	}
@@ -20,8 +20,8 @@ public class StackInt {
 		//if stack is empty
 		if (list.isEmpty()) throw new NoSuchElementException();
 		int res = list.removeFirst();
-		if(!list.isEmpty() && res == max) {
-			max = list.getFirst();
+		if(res == listMax.getFirst()) {
+			listMax.removeFirst();
 		}
 		return res;
 	}
@@ -35,6 +35,6 @@ public class StackInt {
 		//return maximal value of the stack or throw noSuchELementException
 		//if stack is empty
 		if (list.isEmpty()) throw new NoSuchElementException();
-		return max;
+		return listMax.getFirst();
 	}
 }
